@@ -6,6 +6,11 @@ const app= express();
 
 app.use(bodyParser.json());
 
+const User=require('./models/User');
+mongoose.connect('mongodb://localhost/userData')
+
+
+
 app.listen(port, ()=>{
 	console.log(`server is listening on port:${port}`)
 })
